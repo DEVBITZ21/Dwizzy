@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "8019803159",
+    "project_id": "devbitz-9d030",
+    "storage_bucket": "devbitz-9d030.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8019803159:android:8a80c81ea2efd133537052",
+        "android_client_info": {
+          "package_name": "com.example.devbitz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8019803159-h56hj52ku8cfmvrg7ssk9euqkfbcue9f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZGryiAcXIPdXEeI26E603C1mydftz-KQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8019803159-h56hj52ku8cfmvrg7ssk9euqkfbcue9f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
