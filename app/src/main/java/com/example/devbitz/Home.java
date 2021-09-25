@@ -1,5 +1,6 @@
 package com.example.devbitz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,9 +36,14 @@ public class Home extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference category;
+
     TextView txtFullName;
+
     RecyclerView recyler_menu;
     RecyclerView.LayoutManager layoutManager;
+
+    FirebaseRecyclerAdapter<Category, MenuViewHolder> adapter;
+
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomeBinding binding;
@@ -101,7 +107,9 @@ public class Home extends AppCompatActivity {
     }
 
     private void loadMenu() {
-        FirebaseRecyclerAdapter<Category, MenuViewHolder> adapter = new FirebaseRecyclerAdapter<Category, MenuViewHolder>(Category.class,R.layout.menu_item, MenuViewHolder.class,category) {
+         adapter = new FirebaseRecyclerAdapter<Category, MenuViewHolder>(Category.class,R.layout.menu_item, MenuViewHolder.class,category) {
+
+
             @Override
             protected void populateViewHolder(MenuViewHolder menuViewHolder, Category category, int i) {
                 menuViewHolder.txtMenuName.setText(category.getName());
@@ -112,7 +120,14 @@ public class Home extends AppCompatActivity {
                 menuViewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(Home.this,""+clickItem.getName(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(Home.this,""+clickItem.getName(), Toast.LENGTH_SHORT).show();
+
+                        //get category id and send to new activity
+                        Intent foodList = new Intent(Home.this,FoodList.class);
+                        //bcz, category id is key, get key of this item
+                        foodList.putExtra("CategoryId",adapter.getRef(position).getKey());
+                        startActivity(foodList);
+
                     }
                 });
 
