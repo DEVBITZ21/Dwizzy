@@ -11,9 +11,9 @@
         android:orientation="vertical"
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
         <ImageView
-            android:src="@drawable/App_IconS2"
+            android:src="@drawable/app_icon2"
             android:layout_width="200dp"
             android:layout_height="200dp"/>
 
@@ -30,10 +30,36 @@
                 android:layout_alignParentBottom="true"
                 android:weightSum="2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
 
-<!--                <info.hoangBf.widget.FButton-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="wrap_content"-->
+                <info.hoang8f.widget.FButton
+                        android:id="@+id/btnSignUp"
+                        android:text="SignUp"
+                        android:textColor="@android:color/white"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:shadowColor="@android:color/black"
+                        app:buttonColor="@color/btnSignUp"
+                        app:shadowEnabled="true"
+                        app:shadowHeight="5dp"
+                        app:cornerRadius="4dp"/>
+
+                    <info.hoang8f.widget.FButton
+                    android:id="@+id/btnSignIn"
+                    android:text="Sign In"
+                    android:textColor="@android:color/white"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                        app:buttonColor="@color/btnSignActive"
+                    app:shadowColor="@android:color/black"
+                    app:shadowEnabled="true"
+                    app:shadowHeight="5dp"
+                    app:cornerRadius="4dp"/>
+
+
 </RelativeLayout>
 
