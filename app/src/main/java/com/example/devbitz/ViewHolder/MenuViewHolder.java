@@ -1,13 +1,15 @@
 package com.example.devbitz.ViewHolder;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.devbitz.Interface.ItemClickListener;
+import com.example.devbitz.R;
 
-public class MenuViewHolder extends RecyclerView.ViewHolder implements View.OnContextClickListener {
+public class MenuViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
     public TextView txtMenuName;
     public ImageView imageView;
 
@@ -15,14 +17,20 @@ public class MenuViewHolder extends RecyclerView.ViewHolder implements View.OnCo
 
     public MenuViewHolder(View itemView) {
         super(itemView);
-        txtMenuName=(textView)itemView.findViewById(R.id.menu_name);
-        imageView=(imageView)itemView.findViewById(R.id.imageView);
+        
+        txtMenuName = (TextView) itemView.findViewById(R.id.menu_name);
+        imageView =(ImageView) itemView.findViewById(R.id.menu_image);
+        
+        itemView.setOnClickListener(this);
     }
 
     public void setItemClickListener(ItemClickListener itemClickListener){
         this.itemClickListener= itemClickListener;
     }
+
     public void onClick(View view){
         itemClickListener.onClick(view,getAdapterPosition(),false);
     }
+
+
 }

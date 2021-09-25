@@ -49,7 +49,7 @@ public class SignUp extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         //check if already user phone
-                        if(snapshot.child(edtPhone,getText().toString()).exists())
+                        if(snapshot.child(edtPhone.getText().toString()).exists())
                         {
                             mDialog.dismiss();
                             Toast.makeText(SignUp.this,"Phone Number already register",Toast.LENGTH_SHORT).show();
