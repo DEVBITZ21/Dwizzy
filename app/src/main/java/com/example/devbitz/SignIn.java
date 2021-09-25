@@ -39,7 +39,7 @@ public class SignIn extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
 
-                ProgressDialog mDialog = new ProgressDialog(SignIn.this);
+                final ProgressDialog mDialog = new ProgressDialog(SignIn.this);
                 mDialog.setMessage("Please waiting...");
                 mDialog.show();
 
@@ -61,6 +61,7 @@ public class SignIn extends AppCompatActivity {
                             }
                         }
                         else{
+                            mDialog.dismiss();
                             Toast.makeText(SignIn.this, "User not exist in database", Toast.LENGTH_SHORT).show();
                         }
 
