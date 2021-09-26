@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.example.devbitz.ViewHolder.FoodViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 public class FoodList extends AppCompatActivity {
 
@@ -68,7 +70,12 @@ public class FoodList extends AppCompatActivity {
                 foodViewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(FoodList.this,""+local.getName(),Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(FoodList.this,""+local.getName(),Toast.LENGTH_SHORT).show();
+
+                        //start new activity
+                        Intent foodDeatil=new Intent(FoodList.this,FoodDetail.class);
+                        foodDeatil.putExtra("FoodId",adapter.getRef(position).getKey());  //send food it to new activity
+                        startActivity(foodDeatil);
                     }
                 });
             }
