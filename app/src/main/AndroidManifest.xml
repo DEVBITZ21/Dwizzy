@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Devbitz">
         <activity
+            android:name=".Cart"
+            android:exported="true" />
+        <activity
             android:name=".FoodDetail"
             android:exported="true" />
         <activity

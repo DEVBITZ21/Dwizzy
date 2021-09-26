@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ashin/AndroidStudioProjects/Devbitz/app/src/main/res/layout/activity_food_detail.xml" value="0.1" />
         <entry key="..\:/Users/ashin/AndroidStudioProjects/Devbitz/app/src/main/res/layout/activity_food_list.xml" value="0.15" />
         <entry key="..\:/Users/ashin/AndroidStudioProjects/Devbitz/app/src/main/res/layout/activity_home.xml" value="0.22" />
         <entry key="..\:/Users/ashin/AndroidStudioProjects/Devbitz/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -15,6 +14,7 @@
         <entry key="..\:/Users/ashin/AndroidStudioProjects/Devbitz/app/src/main/res/layout/nav_header_home.xml" value="0.25" />
         <entry key="..\:/Users/ashin/AndroidStudioProjects/Devbitz/app/src/main/res/menu/activity_main_drawer.xml" value="0.67" />
         <entry key="..\:/Users/ashin/AndroidStudioProjects/Devbitz/app/src/main/res/menu/home.xml" value="0.22" />
+        <entry key="..\:/Users/thili/StudioProjects/mad21/Dwizzy/app/src/main/res/layout/activity_cart.xml" value="0.2" />
       </map>
     </option>
   </component>
