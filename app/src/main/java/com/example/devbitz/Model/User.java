@@ -9,10 +9,10 @@ public class User {
     public User() {
     }
 
-    public User(String name, String password, String phone) {
+    public User(String name, String password) { //, String phone
         Name = name;
         Password = password;
-        this.phone = phone;
+//        this.phone = phone;
     }
 
     public String getPhone() {

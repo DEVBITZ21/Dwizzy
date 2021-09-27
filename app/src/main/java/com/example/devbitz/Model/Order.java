@@ -15,6 +15,9 @@ public class Order {
         Discount = discount;
     }
 
+    public Order(String productId) {
+    }
+
     public String getProductId() {
         return ProductId;
     }
